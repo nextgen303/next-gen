@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body 
+{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
+
+/* custom.css */
+.filter-invert-brightness {
+    filter: invert(100%) brightness(0%);
+  }
+  
+  .dark .filter-invert-brightness {
+    filter: none;
+  }
+  
