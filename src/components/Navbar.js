@@ -38,10 +38,7 @@ const CustomMobileLink = ({ href, icon, className = "", toggle }) => {
   };
 
   return (
-    <button
-      className={`${className} relative group`}
-      onClick={handleClick}
-    >
+    <button className={`${className} relative group`} onClick={handleClick}>
       {icon}
     </button>
   );
@@ -69,7 +66,11 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`fixed w-full px-32 py-4 font-medium flex items-center justify-between dark:text-light lg:px-16 md:px-12 sm:px-5 z-20 transition-transform duration-300 ${hideNav ? '-translate-y-full' : 'translate-y-0'}`}>
+    <header
+      className={`fixed w-full px-32 py-4 font-medium bg-light dark:bg-dark flex items-center justify-between dark:text-light lg:px-16 md:px-12 sm:px-5 z-20 transition-transform duration-300 ${
+        hideNav ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="w-full justify-between items-center hidden lg:flex">
         <Logo />
 
@@ -95,13 +96,19 @@ const Navbar = () => {
               onClick={handleClick}
             >
               <span
-                className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-1.5 w-7 rounded-sm  ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
+                className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-1.5 w-7 rounded-sm  ${
+                  isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+                }`}
               ></span>
               <span
-                className={` dark:bg-light block transition-all duration-300 ease-out rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"}`}
+                className={` dark:bg-light block transition-all duration-300 ease-out rounded-sm my-0.5 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
               ></span>
               <span
-                className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-7 rounded-sm  ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
+                className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-7 rounded-sm  ${
+                  isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+                }`}
               ></span>
             </button>
           </div>
@@ -110,7 +117,6 @@ const Navbar = () => {
 
       <div className="w-full flex justify-between items-center lg:hidden">
         <Logo />
-
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
